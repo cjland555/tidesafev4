@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #0b1d36;
+  --color-navy-900: #13294b;
+  --color-navy-800: #1c3a63;
+  --color-navy-700: #2a4f7e;
+  --color-sand-50: #f6fafc;
+  --color-sand-100: #eaf3f8;
+  --color-sand-200: #d9e8f0;
+  --color-sand-400: #8fc3d3;
+  --color-brass: #0e7c96;
+  --color-coral: #0e7c96;
+  --color-coral-dark: #0a6378;
+  --color-brand-navy: #01254b;
+  --color-teal-300: #2dc2cf;
+  --color-teal-600: #027c99;
+  --color-ink: #1b2b3f;
+  --color-alert: #c9362f;
+  --color-mist: #4f6276;
+
+  --font-serif: var(--font-source-serif), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-sand-50);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Tide slider thumb */
+input[type="range"].tide-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 100%;
+  height: 2.5rem;
+  cursor: pointer;
+}
+input[type="range"].tide-range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #13294b, #0e7c96 60%, #c9362f);
+}
+input[type="range"].tide-range::-moz-range-track {
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #13294b, #0e7c96 60%, #c9362f);
+}
+input[type="range"].tide-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid #13294b;
+  box-shadow: 0 4px 14px rgba(6, 20, 35, 0.35);
+}
+input[type="range"].tide-range::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 2px solid #13294b;
+}
+input[type="range"].tide-range:focus-visible {
+  outline: 2px solid #d9603b;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Flyer-style wide-tracked subtitle */
+.kicker {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
